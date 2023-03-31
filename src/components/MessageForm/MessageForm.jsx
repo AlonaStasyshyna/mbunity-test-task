@@ -1,53 +1,141 @@
+import { useState } from 'react';
+import {
+  DataInput,
+  DataLabel,
+  Form,
+  Section,
+  SubjectLabel,
+  SubjectText,
+  DataWrapper,
+  SubjectWrapper,
+  SubjectInput,
+  MessageLabel,
+  MessageTextarea,
+  Button,
+  ButtonWrapper,
+} from './MessageForm.styled';
+
 export const MessageForm = () => {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [tel, setTel] = useState('');
+  const [message, setMessage] = useState('');
+
+  const submitForm = e => {
+    e.preventDefault();
+
+    setFirstName('');
+    setLastName('');
+    setEmail('');
+    setTel('');
+    setMessage('');
+  };
+
+  const changeInput = ({ target: { name, value } }) => {
+    switch (name) {
+      case 'firstName':
+        setFirstName(value);
+        break;
+      case 'lastName':
+        setLastName(value);
+        break;
+      case 'email':
+        setEmail(value);
+        break;
+      case 'tel':
+        setTel(value);
+        break;
+      case 'message':
+        setMessage(value);
+        break;
+      default:
+        return;
+    }
+  };
+
   return (
-    <section>
-      <form>
-        <label>
-          First Name
-          <input type="text" name="firstName" />
-        </label>
-        <label>
-          Last Name
-          <input type="text" name="lastName" />
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" />
-        </label>
-        <label>
-          Phone Number
-          <input type="tel" name="tel" />
-        </label>
+    <Section>
+      <Form onSubmit={submitForm}>
+        <DataWrapper>
+          <DataLabel isFilled={firstName.length}>
+            First Name
+            <DataInput
+              type="text"
+              name="firstName"
+              value={firstName}
+              onChange={changeInput}
+            />
+          </DataLabel>
+          <DataLabel>
+            Last Name
+            <DataInput
+              type="text"
+              name="lastName"
+              value={lastName}
+              onChange={changeInput}
+            />
+          </DataLabel>
+          <DataLabel>
+            Email
+            <DataInput
+              type="email"
+              name="email"
+              value={email}
+              onChange={changeInput}
+            />
+          </DataLabel>
+          <DataLabel>
+            Phone Number
+            <DataInput
+              type="tel"
+              name="tel"
+              value={tel}
+              onChange={changeInput}
+            />
+          </DataLabel>
+        </DataWrapper>
 
-        <p>Select Subject?</p>
-        <label>
-          <input type="radio" name="subject" value="first" checked />
-          General Inquiry
-        </label>
-        <label>
-          <input type="radio" name="subject" value="second" />
-          General Inquiry
-        </label>
-        <label>
-          <input type="radio" name="subject" value="third" />
-          General Inquiry
-        </label>
-        <label>
-          <input type="radio" name="subject" value="fourth" />
-          General Inquiry
-        </label>
+        <SubjectText>Select Subject?</SubjectText>
+        <SubjectWrapper>
+          <SubjectLabel>
+            <SubjectInput
+              type="radio"
+              name="subject"
+              value="first"
+              defaultChecked={true}
+            />
+            General Inquiry
+          </SubjectLabel>
+          <SubjectLabel>
+            <SubjectInput type="radio" name="subject" value="second" />
+            General Inquiry
+          </SubjectLabel>
+          <SubjectLabel>
+            <SubjectInput type="radio" name="subject" value="third" />
+            General Inquiry
+          </SubjectLabel>
+          <SubjectLabel>
+            <SubjectInput type="radio" name="subject" value="fourth" />
+            General Inquiry
+          </SubjectLabel>
+        </SubjectWrapper>
 
-        <label>
+        <MessageLabel>
           Message
-          <textarea
+          <MessageTextarea
             name="message"
             rows="1"
+            value={message}
             placeholder="Write your message..."
-          ></textarea>
-        </label>
+            onChange={changeInput}
+          ></MessageTextarea>
+        </MessageLabel>
 
-        <button type="submit">Send</button>
-      </form>
-    </section>
+        <ButtonWrapper>
+          <Button type="submit">Send Message</Button>
+        </ButtonWrapper>
+      </Form>
+    </Section>
   );
 };

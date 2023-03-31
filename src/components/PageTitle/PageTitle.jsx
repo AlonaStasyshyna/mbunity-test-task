@@ -1,8 +1,10 @@
+import { Section, Text, Title } from './PageTitle.styled';
+
 export const PageTitle = ({ title, text }) => {
   return (
-    <section>
-      <h1>{title}</h1>
-      <p>{text} </p>
-    </section>
+    <Section>
+      <Title>{title}</Title>
+      <Text>{text} </Text>
+    </Section>
   );
 };
