@@ -34,7 +34,7 @@ export const Section = styled.section`
     background-color: rgba(72, 72, 72, 0.5);
   }
 
-  @media screen and (min-width: 1190px) {
+  @media screen and (min-width: 1236px) {
     max-width: 491px;
     padding: 40px 40px 40px 36px;
     border-radius: 10px;
@@ -61,7 +61,7 @@ export const Title = styled.h2`
   font-weight: 600;
   font-size: 20px;
 
-  @media screen and (min-width: 1190px) {
+  @media screen and (min-width: 1236px) {
     font-size: 28px;
   }
 `;
@@ -71,7 +71,7 @@ export const Text = styled.p`
   font-size: 11px;
   color: #c9c9c9;
 
-  @media screen and (min-width: 1190px) {
+  @media screen and (min-width: 1236px) {
     margin-bottom: 111px;
     font-size: 18px;
   }

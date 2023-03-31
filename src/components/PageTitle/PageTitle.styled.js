@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Section = styled.section`
   margin-bottom: 20px;
 
-  @media screen and (min-width: 1190px) {
+  @media screen and (min-width: 1236px) {
     margin-bottom: 50px;
   }
 `;
@@ -15,7 +15,7 @@ export const Title = styled.h1`
   font-size: 24px;
   color: #000000;
 
-  @media screen and (min-width: 1190px) {
+  @media screen and (min-width: 1236px) {
     font-size: 40px;
   }
 `;
@@ -30,7 +30,7 @@ export const Text = styled.p`
   font-size: 14px;
   color: #717171;
 
-  @media screen and (min-width: 1190px) {
+  @media screen and (min-width: 1236px) {
     max-width: 100%;
     font-size: 18px;
   }

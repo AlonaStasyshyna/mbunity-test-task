@@ -4,7 +4,7 @@ export const List = styled.ul`
   display: flex;
   gap: 24px;
 
-  @media screen and (max-width: 1189px) {
+  @media screen and (max-width: 1235px) {
     justify-content: center;
   }
 `;

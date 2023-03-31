@@ -22,7 +22,7 @@ export const Section = styled.section`
     background-image: url(${backgroundLetter});
   }
 
-  @media screen and (min-width: 1190px) {
+  @media screen and (min-width: 1236px) {
     padding: 50px 40px 50px 50px;
 
     &::after {
@@ -46,7 +46,7 @@ export const DataWrapper = styled.div`
   gap: 20px;
   margin-bottom: 25px;
 
-  @media screen and (min-width: 1190px) {
+  @media screen and (min-width: 1236px) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -83,7 +83,7 @@ export const DataInput = styled.input`
     border-color: #000000;
   }
 
-  @media screen and (min-width: 1190px) {
+  @media screen and (min-width: 1236px) {
     width: 278px;
   }
 `;
@@ -94,7 +94,7 @@ export const SubjectText = styled.p`
   font-size: 14px;
   color: #000000;
 
-  @media screen and (min-width: 1190px) {
+  @media screen and (min-width: 1236px) {
     margin-bottom: 14px;
   }
 `;
@@ -105,7 +105,7 @@ export const SubjectWrapper = styled.div`
   gap: 14px 20px;
   margin-bottom: 25px;
 
-  @media screen and (min-width: 1190px) {
+  @media screen and (min-width: 1236px) {
     margin-bottom: 45px;
   }
 `;
@@ -148,13 +148,13 @@ export const MessageLabel = styled(DataLabel)`
   gap: 5px;
   margin-bottom: 25px;
 
-  @media screen and (min-width: 1190px) {
+  @media screen and (min-width: 1236px) {
     margin-bottom: 45px;
   }
 `;
 
 export const MessageTextarea = styled(DataInput)`
-  @media screen and (min-width: 1190px) {
+  @media screen and (min-width: 1236px) {
     width: 100%;
   }
 `;
@@ -179,7 +179,7 @@ export const Button = styled.button`
   border: none;
   border-radius: 3px;
 
-  @media screen and (min-width: 1190px) {
+  @media screen and (min-width: 1236px) {
     width: 146px;
     padding: 15px;
     margin-right: 68px;
