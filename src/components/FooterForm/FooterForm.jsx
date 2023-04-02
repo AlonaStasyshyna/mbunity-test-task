@@ -1,14 +1,19 @@
+import { Title } from 'components/Footer/Footer.styled';
+import { Button, Form, Input, Text, Wrapper } from './FooterForm.styled';
+
 export const FooterForm = () => {
   return (
-    <>
-      <h3>Join Our Newsletter</h3>
+    <Wrapper>
+      <Title>Join Our Newsletter</Title>
 
-      <form>
-        <input type="email" name="email" placeholder="Your email address" />
-        <button type="submit">Subscribe</button>
-      </form>
+      <Form>
+        <Input type="email" name="email" placeholder="Your email address" />
+        <Button type="submit">Subscribe</Button>
+      </Form>
 
-      <p>* Will send you weekly updates for your better tool management.</p>
-    </>
+      <Text>
+        * Will send you weekly updates for your better tool management.
+      </Text>
+    </Wrapper>
   );
 };

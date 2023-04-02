@@ -1,14 +1,12 @@
-import { Logo } from 'components/Logo/Logo';
 import { Navigation } from 'components/Navigation/Navigation';
-import { Container } from 'utils/GlobalStyle.styled';
+import { CustomizedContainer, CustomizedHeader } from './Header.styled';
 
 export const Header = () => {
   return (
-    <header>
-      <Container>
-        <Logo />
+    <CustomizedHeader>
+      <CustomizedContainer>
         <Navigation />
-      </Container>
-    </header>
+      </CustomizedContainer>
+    </CustomizedHeader>
   );
 };

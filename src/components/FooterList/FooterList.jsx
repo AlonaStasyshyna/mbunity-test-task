@@ -1,31 +1,34 @@
+import { Title } from 'components/Footer/Footer.styled';
+import { List, Wrapper, LastWrapper } from './FooterList.styled';
+
 export const FooterList = () => {
   return (
-    <ul>
-      <li>
-        <h3>Company</h3>
-        <ul>
+    <>
+      <Wrapper>
+        <Title>Company</Title>
+        <List>
           <li>About</li>
           <li>Contact</li>
           <li>Blogs</li>
-        </ul>
-      </li>
-      <li>
-        <h3>Legal</h3>
-        <ul>
+        </List>
+      </Wrapper>
+      <Wrapper>
+        <Title>Legal</Title>
+        <List>
           <li>Privacy Policy</li>
           <li>Terms & Services</li>
           <li>Terms of Use</li>
           <li>Refund Policy</li>
-        </ul>
-      </li>
-      <li>
-        <h3>Quick Links</h3>
-        <ul>
+        </List>
+      </Wrapper>
+      <LastWrapper>
+        <Title>Quick Links</Title>
+        <List>
           <li>Techlabz Keybox</li>
           <li>Downloads</li>
           <li>Forum</li>
-        </ul>
-      </li>
-    </ul>
+        </List>
+      </LastWrapper>
+    </>
   );
 };

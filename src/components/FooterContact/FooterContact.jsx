@@ -1,10 +1,12 @@
 import { ContactList } from 'components/ContactList/ContactList';
+import { Title } from 'components/Footer/Footer.styled';
+import { Wrapper } from './FooterContact.styled';
 
 export const FooterContact = () => {
   return (
-    <>
-      <h3>Reach us</h3>
+    <Wrapper>
+      <Title>Reach us</Title>
       <ContactList />
-    </>
+    </Wrapper>
   );
 };
