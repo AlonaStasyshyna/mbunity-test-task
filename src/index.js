@@ -7,7 +7,7 @@ import { GlobalStyle } from 'utils/GlobalStyle.styled';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="/mbunity-test-task">
+    <BrowserRouter basename="/mbunity-test-task/contacts">
       <GlobalStyle />
       <App />
     </BrowserRouter>
